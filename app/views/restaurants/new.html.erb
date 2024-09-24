@@ -1,0 +1,17 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <h1 class="mb-4">New Restaurant</h1>
+
+      <%= simple_form_for @restaurant do |f| %>
+        <div class="form-group">
+          <%= f.input :name %>
+          <%= f.input :address %>
+          <%= f.input :phone_number %>
+          <%= f.input :category, collection: ["chinese", "italian", "japanese", "french", "belgian"] %>
+        </div>
+        <%= f.submit 'Create Restaurant', class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
